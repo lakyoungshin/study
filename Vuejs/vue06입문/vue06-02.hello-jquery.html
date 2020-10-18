@@ -14,10 +14,17 @@
     <hr />
 
     <div id="app">
-        <!-- 여기에  Hello, jQery!!!! 출력 -->
+        <p>{{   message }}</p>
+        <button>click me!</button>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $("#app>p").text("hello,jquery");
+        $("#app>button").on("click", function(event){
+            alert("hi")
+        });
+    </script>
 </body>
 
 </html>
 
-

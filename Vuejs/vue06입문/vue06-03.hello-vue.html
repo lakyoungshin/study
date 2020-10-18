@@ -28,10 +28,27 @@
     <hr>
 
     <div id="app">
-        {{ message }}
+        <p>{{   message  }}</p>
+        <button v-on:click="clickBtn">click me!</button>
     </div>
 </body>
 
 </html>
 
 <!-- vue 스크립트 플러그인 임포트   -->
+
+<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: "HELLO!, Vue"
+        },
+        methods: { 
+            clickBtn: function(event) {
+                this.$data.message = "Hello~~~~~~~~~~~~~"
+                alert("hi")
+            }
+        },
+    });
+</script>
