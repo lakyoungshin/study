@@ -77,11 +77,12 @@
             v-model 속성은 v-bind와 v-on의 조합으로 동작합니다.
             <input v-bind:value="inputText" v-on:input="updateInput">
             HTML 입력 요소의 종류에 따라 `v-model` 속성이 각각 다음과 같이 구성됩니다.
-            (1) text input 태그이면 `value / input`
-            (2) checkbox input 태그이면 `checked / change`
-            (3) radio input 태그이면 `checked / change`
-            (4) select 태그이면 `value / change`
-            (5) textarea 태그이면 `value / input`
+            (1) input 태그이면 `value / input`
+            (2) text input 태그이면 `value / input`
+            (3) checkbox input 태그이면 `checked / change`
+            (4) radio input 태그이면 `checked / change`
+            (5) select 태그이면 `value / change`
+            (6) textarea 태그이면 `value / input`
 
 
         [참조]page 103, 104, 105

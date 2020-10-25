@@ -27,7 +27,7 @@
             1. 버튼을 만들고 클릭(click) 이벤트를 설정한다.
                 버튼 추가와 클릭 이벤트 핸들러 작성 시 vue13-10 예제를 참조하시오
             2. 버튼을 클릭하면 message 값을 자신의 이름으로 바꾼다.
-            
+            v-on:click="이벤트핸들러"
         [참조]page 49, 104 소스 5번항 참조. 
     </pre>
     <hr>
@@ -35,11 +35,44 @@
     <div id="app">
         {{ message }}
         <!-- 버튼 기능 추가-->
-        
+        <button v-on:click="abc">rksksks</button>
     </div>
 </body>
 
 </html>
 
-<!-- vue 스크립트 플러그인 임포트   -->
+<!-- vue 플러그인 임포트   -->
+<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"> /* vue 플러그인 임포트 */</script>
+<script>
+    //import axios from "axios";
 
+    new Vue({
+        /* edtmc^2w */
+        el: "#app",
+        data: {
+            message: 'hello.js!'
+        },
+        //template: ``,
+        methods: {
+            abc: function (event) {
+                console.log("abc");
+                this.$data.message = "lalala";
+            }
+        },
+        components: {},
+        computed: {
+
+        },
+        watch: {
+
+        },
+        mounted: function () {
+            console.log("mounted");
+            this.$data.message = "bca";
+        },
+        updated: function () {
+            console.log("updated");
+            this.$data.message = "aaa";
+        },
+    });
+</script>

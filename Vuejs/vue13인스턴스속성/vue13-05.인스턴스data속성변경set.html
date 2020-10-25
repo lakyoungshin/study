@@ -82,19 +82,19 @@
         },
         methods: {
             change1: function (event) {
-               // this.$data.arr[0] = 100;
-               // console.log(this.$data.arr); // [100,2,3,4,5]
-              //  debugger;
+                // this.$data.arr[0] = 100;
+                // console.log(this.$data.arr); // [100,2,3,4,5]
+                //  debugger;
 
                 Vue.set(this.$data.arr, 0, 100);
-                console.log(this.$data.arr); 
+                console.log(this.$data.arr);
             },
             change2: function (event) {
                 this.$set(this.$data.arr, 0, 300);
-                console.log(this.$data.arr); 
+                console.log(this.$data.arr);
             },
             change3: function (event) {
-                this.$data.arr.splice(0,2, 500);
+                this.$data.arr.splice(0, 2, 500);
             },
             change4: function (event) {
                 this.$data.arr = [...this.$data.arr, 70];

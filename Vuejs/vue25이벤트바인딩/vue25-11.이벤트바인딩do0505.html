@@ -52,3 +52,49 @@
 </html>
 
 <!-- vue 스크립트 플러그인 임포트   -->
+<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"> /* vue 플러그인 임포트 */</script>
+<script>
+    //import axios from "axios";
+    
+    new Vue({
+        /* edtmc^2w */
+        el: "#app",
+        data: {
+            sum1: null,
+            sum10: null,
+            numInput: null,
+            sumInput: null,
+        },
+        //template: ``,
+        methods: {
+            clickBtn1 : function(event){
+                Vue.set(this.$data, 'sum1' , this.$data.sum1+1);
+                //this.$data.sum1= this.$data.sum1 +1 ;
+            },
+            clickBtn10 : function(event){
+                //data-num은 dataset으로 접근 가능하다.
+                console.log(event.target.dataset.num)
+                var num = event.target.dataset.num ; //문자열 > 숫자로 변환
+                Vue.set(this.$data, 'sum10' , this.$data.sum10+Number(num));
+                //this.$data.sum1= this.$data.sum1 +1 ;
+
+            },            
+            clickBtnInput : function(event){
+                Vue.set(this.$data, 'sumInput' , this.$data.sum10+Number(this.$data.numInput));
+            },            
+        },
+        components: { }, 
+        computed: {
+    
+        },
+        watch: {
+    
+        },
+        mounted: function() {
+            console.log("mounted");
+        },
+        updated: function() {
+            console.log("updated");
+        },
+    });
+</script>
