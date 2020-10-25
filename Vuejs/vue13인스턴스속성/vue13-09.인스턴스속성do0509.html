@@ -50,10 +50,42 @@
     </xmp>
     <hr>
     <div id="app">
-        <input type="text" name="message" id="message" v-on:keyup="msgKey">
-    </div>
+        <input type="text" name="message" id="message" v-on:keyup="msgKey" v-on:keypress="msg">
+        
 
+    </div>
 </body>
 </html>
 
-<!-- vue 스크립트 플러그인 임포트   -->
+<!-- vue 스크립트 플러그인 임포트 -->
+<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+<script>
+//import axios from 
+;
+
+new Vue({
+    /* edtmc^2w */
+    el: "#app",
+    data: {
+
+    },
+    //template: ``,
+    methods: {
+      msg: (event)=> {
+        console.log (event.target.value)
+      }
+    },
+    components: { }, 
+    computed: {
+
+    },
+    watch: {
+
+    },
+    mounted: function() {
+        console.log("mounted");
+    },
+    updated: function() {
+        console.log("updated");
+    },
+});
